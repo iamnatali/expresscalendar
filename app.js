@@ -13,7 +13,6 @@ var https = require( "https" );
 var fs = require( "fs" ); 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb://localhost:27017/calendardb';
@@ -60,7 +59,6 @@ app.use(logger('dev'));
 app.use(express.json());*/
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 
 passport.use(new LocalStrategy(

@@ -22,8 +22,6 @@ function authenticationMiddleware() {
   }
 }
 
-//module.exports.authenticationMiddleware = authenticationMiddleware;
-
 router.get("/createuser", function(req, res){
   res.render("createuser.hbs", {
     css: "/stylesheets/createuser.css"
