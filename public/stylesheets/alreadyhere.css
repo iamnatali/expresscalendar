@@ -1,0 +1,106 @@
+@font-face {
+    font-family:"Rise";
+    src: url("../Rise/Rise.ttf") format("truetype");
+  }
+@font-face {
+    font-family:"Fox";
+    src: url("../Fox-Cat/Fox.ttf") format("truetype");
+  }
+  @font-face {
+    font-family:"Cav";
+    src: url("../caviar_dreams/CaviarDreams.ttf") format("truetype");
+  }
+
+  .inner_container:hover{
+    background-color: rgb(170, 216, 191);
+    border-radius: 5vmin;
+}
+
+.alreadyhere_label{
+    position: absolute;
+    top: 40vmin;
+    left: 20vmin;
+    margin: 5vmin;
+    word-wrap: break-word;
+    font-family: Cav;
+    font-size: 4vmin;
+    text-align: center;
+    border-radius: 5vmin;
+    width: 30vmin;
+    background-color: rgba(255, 0, 0, 0.411);
+}
+
+.wrongauth_label{
+    display: none;
+}
+
+.inner_container, form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inner_container{
+    margin: 2vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title{
+    font-size: 8vmin;
+    width: 100%;
+    text-align: center;
+    font-family:"Cav";
+}
+
+.label{
+    color: rgb(85, 85, 85);
+    font-family:"Cav";
+}
+
+.label, .button{
+    font-size: 5vmin;
+}
+
+.button{
+    background-color: rgb(14, 182, 90);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border: none;
+    border-radius: 5vmin;
+    height: 7vmin;
+    font-family:"Cav";
+}
+
+.button:hover{
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 1px 1px 1px 2px  rgb(65, 170, 113);
+}
+
+.button:focus,
+.field:focus {
+    outline-width: 0;
+}
+
+.field:focus{
+    border-color: rgb(65, 170, 113);
+    border-width: 2px;
+}
+
+.field{
+    border-radius: 5vmin;
+    border-width: 1px;
+    height: 5vmin;
+}
+
+.main_title{
+    font-size: 8vmin;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: rgb(11, 153, 75);
+    font-family:"Rise";
+}

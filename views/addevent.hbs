@@ -1,0 +1,29 @@
+<!--DOCTYPE html-->
+<html>
+<head>
+<title>Добавить событие</title>
+<link rel="stylesheet" href="{{css}}">
+<!--script src="/createuser.js"></script-->
+<meta charset="utf-8" />
+</head>
+<body>
+<div class="container">
+<div class="inner_container">
+<header class="title">Событие</header>
+<form class="register_form form" method="get" autocomplete="off" action="/addeventdb">
+ <label class="label">Название</label>
+ <input class="field register_login login" 
+ type="text" name="name" required/>
+ <label class="label">Начало</label>
+ <input class="field" type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="start_date"/>
+ <input class="field" type="time" required pattern="[0-9]{2}:[0-9]{2}" name="start_time"/>
+ <label class="label">Конец</label>
+ <input class="field" type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="end_date"/>
+ <input class="field" type="time" required pattern="[0-9]{2}:[0-9]{2}" name="end_time"/>
+ <input class="button" type="submit" value="Создать событие">
+ <input type="hidden" name="user" value="{{n}}" />
+</form>
+</div>
+</div>
+</body>
+</html>

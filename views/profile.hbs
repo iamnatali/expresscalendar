@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Профиль</title>
+<link rel="stylesheet" href="/stylesheets/profile.css">
+<!--script src="createuser.js"></script-->
+<meta charset="utf-8" />
+</head>
+<body>
+<h1 class="name">{{myname}}</h1>
+<div class="container">
+<div class="inner_container">
+<header class="title">События</header>
+{{#each events}}
+<div class="event_item">
+    <div class="event_container">
+    {{this.name}}
+    <div class="time">Начало: {{this.start}}</div>
+    <div class="time">Конец: {{this.end}}</div>
+    </div>
+    <a href="/deleteevent/{{../myname}}/{{this.name}}">
+    <img src="https://img.icons8.com/metro/26/26e07f/delete-sign.png"/></a>
+</div>
+{{/each}}
+<a href="/addevent/{{myname}}"><img src="https://img.icons8.com/metro/26/26e07f/plus.png"/></a><!--Промежуточная ссылка-->
+</div>
+<div class="inner_container">
+<header class="title">Друзья</header>
+<form class="form" id="form1" method="post" autocomplete="off" action="/addfriend">
+<input class="friend_text" type="text" name="friend" required placeholder="добавить друга">
+<input type="hidden" name="user" value="{{myname}}">
+<button class="friend_button" type="submit" form="form1">
+    <img src="https://img.icons8.com/metro/26/26e07f/plus.png"/></button>
+</form>
+<form action="/intersect/{{myname}}" method="get">
+    {{#each friends}}
+    <div class="friend_item">
+    {{this.name}}
+    <a href="/deletefriend/{{../myname}}/{{this._id}}">
+    <img src="https://img.icons8.com/metro/26/26e07f/delete-sign.png"/></a>
+    <input type="checkbox" class="friend_checkbox" name="{{this.name}}" value="{{this._id}}">
+    </div>
+    {{/each}}
+    <label class="label">Начало периода поиска</label>
+    <input class="field" type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="start_date"/>
+    <input class="field" type="time" required pattern="[0-9]{2}:[0-9]{2}" name="start_time"/>
+    <label class="label">Конец периода поиска</label>
+    <input class="field" type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="end_date"/>
+    <input class="field" type="time" required pattern="[0-9]{2}:[0-9]{2}" name="end_time"/>
+    <button class="button">Найти общее время</button>
+</form>
+</div>
+</div>
+</body>
+</html>

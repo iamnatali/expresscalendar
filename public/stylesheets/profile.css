@@ -1,0 +1,168 @@
+@font-face {
+    font-family:"Rise";
+    src: url("../Rise/Rise.ttf") format("truetype");
+  }
+@font-face {
+    font-family:"Fox";
+    src: url("../Fox-Cat/Fox.ttf") format("truetype");
+  }
+  @font-face {
+    font-family:"Cav";
+    src: url("../caviar_dreams/CaviarDreams.ttf") format("truetype");
+  }
+
+.inner_container, form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inner_container{
+    margin-left: 20px;
+    margin-right: 6vw;
+}
+
+.container, .event_item, .friend_item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.container{
+    position: relative;
+    bottom: 10vmin;
+}
+
+.event_item, .friend_item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 4.5vmin;
+    align-items: center;
+    font-family: Cav;
+}
+
+.friend_name{
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title{
+    font-size: 6vmin;
+    width: 100%;
+    text-align: left;
+    font-family: Cav;
+}
+
+.event_container{
+    width: 40vw;
+    border-color: rgb(118, 221, 164);
+    border-style: solid;
+}
+
+.event_container:hover{
+    background-color:  rgba(182, 236, 206, 0.473);
+}
+
+.main_title, .name{
+    font-size: 7vmin;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: rgb(11, 153, 75);
+}
+
+.name{
+    margin-left: 25px;
+    text-align: left;
+    font-family: Rise;
+    bottom: 10vmin;
+    left: 0;
+}
+
+.friend_item:hover{
+    background-color: rgba(182, 236, 206, 0.473);
+    border-radius: 2px;
+}
+
+.event_image{
+    margin: 10px;
+}
+
+.button{
+    background-color: rgb(92, 209, 145);
+    border: none;
+    border-radius: 5vmin;
+    height: 7vmin;
+    width: 16vw;
+    height: 15vh;
+    font-family: Cav;
+    font-weight: bold;
+    font-size: 4vmin;
+}
+
+.button:hover{
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 1px 1px 1px 2px  rgb(65, 170, 113);
+}
+
+.button:focus {
+    outline-width: 0;
+}
+
+.time{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 3.5vmin;
+    color: rgb(105, 104, 104);
+}
+
+.friend_checkbox{
+    height: 26px;
+    width: 26px;
+}
+
+.plus{
+    width: 20vw;
+}
+
+#form1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.friend_button{
+    width: 5vw;
+}
+
+.friend_text{
+    width: 12vw;
+    font-family: Cav;
+    font-size: 3vmin;
+}
+
+.label{
+    color: rgb(85, 85, 85);
+    font-family:"Cav";
+    font-size: 4vmin;
+}
+
+.field:focus {
+    outline-width: 0;
+}
+
+.field:focus{
+    border-color: rgb(65, 170, 113);
+    border-width: 2px;
+}
+
+.field{
+    border-radius: 5vmin;
+    border-width: 1px;
+    height: 5vmin;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
